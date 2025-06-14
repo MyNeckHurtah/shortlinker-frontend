@@ -2,11 +2,15 @@ import { createI18n } from 'vue-i18n'
 import en from './locales/en.json'
 import zh from './locales/zh.json'
 import ja from './locales/ja.json'
+import fr from './locales/fr.json'
+import ru from './locales/ru.json'
 
 const messages = {
   en,
   zh,
-  ja
+  ja,
+  fr,
+  ru
 }
 
 // 语言配置映射
@@ -25,6 +29,16 @@ export const languageConfig = {
     flag: '🇯🇵',
     name: '日本語',
     code: 'ja'
+  },
+  fr: {
+    flag: '🇫🇷',
+    name: 'Français',
+    code: 'fr'
+  },
+  ru: {
+    flag: '🇷🇺',
+    name: 'Русский',
+    code: 'ru'
   }
 } as const
 
@@ -46,7 +60,9 @@ export const getLanguageKey = (lang: string) => {
   const keyMap: Record<string, string> = {
     zh: 'chinese',
     en: 'english',
-    ja: 'japanese'
+    ja: 'japanese',
+    fr: 'french',
+    ru: 'russian'
   }
   return keyMap[lang] || lang
 }
@@ -66,6 +82,12 @@ function getDefaultLocale(): string {
   }
   if (browserLang.startsWith('ja')) {
     return 'ja'
+  }
+  if (browserLang.startsWith('fr')) {
+    return 'fr'
+  }
+  if (browserLang.startsWith('ru')) {
+    return 'ru'
   }
 
   // 3. 默认英语

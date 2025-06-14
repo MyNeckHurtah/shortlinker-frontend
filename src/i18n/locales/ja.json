@@ -207,7 +207,9 @@
       "switch": "言語を切り替え",
       "english": "English",
       "chinese": "中文",
-      "japanese": "日本語"
+      "japanese": "日本語",
+      "french": "Français",
+      "russian": "Русский"
     }
   },
   "theme": {
